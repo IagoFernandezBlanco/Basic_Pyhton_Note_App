@@ -3,12 +3,17 @@ Proeycto pythom MYSQL
 Un asistente que te permite loguearte/registro
 Permite crear notas, una vez registrado
 """
+#importar módulo sqlite
+import sqlite3
+
+# creación base de datos
+conexion = sqlite3.connect("./20-proyecto-python/usuarios.db")
+
 
 accion_usuario = int(input("Que acción quieres realizar \n1.Logueo \n2.Registro \n3.Salir \n"))
 while accion_usuario >=1:
     if accion_usuario == 1:
         print("Logueo")
-        
     elif accion_usuario == 2:
         print("Registro")
         accion_usuario_registro = int(input("Que acción quieres realizar \n1.Crear notas \n2. Eliminar notas \n3.Modificar \n4.Salir \n"))
